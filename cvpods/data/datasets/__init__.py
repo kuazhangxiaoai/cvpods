@@ -11,6 +11,7 @@ from .objects365 import Objects365Dataset
 from .torchvision_datasets import CIFAR10Dataset, STL10Datasets
 from .voc import VOCDataset
 from .widerface import WiderFaceDataset
+from .DOTA import DOTADataset
 
 __all__ = [
     "COCODataset",
@@ -25,4 +26,5 @@ __all__ = [
     "CrowdHumanDataset",
     "CIFAR10Dataset",
     "STL10Datasets",
+    "DOTADataset"
 ]

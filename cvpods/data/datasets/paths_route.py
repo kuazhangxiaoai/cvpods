@@ -303,3 +303,13 @@ _PREDEFINED_SPLITS_CROWDHUMAN = {
 }
 
 PATH_ROUTES.register(_PREDEFINED_SPLITS_CROWDHUMAN, "CROWDHUMAN")
+
+_DOTA_SPLIT_DATASET = {
+    "dataset_type": "DOTADataset",
+    "evaluator_type":{"dota" : "dota"},
+    "dota":{ #tain/val:(images_dir, annotation_dir)
+        "dota_train": ("train/images","train/DOTA_trainval1024.json"),
+        "dota_val":("val/images", "train/DOTA_val1024.json")
+    }
+}
+PATH_ROUTES.register(_DOTA_SPLIT_DATASET, "DOTA")

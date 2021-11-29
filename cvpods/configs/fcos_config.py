@@ -18,7 +18,7 @@ _config_dict = dict(
             OFFSET=0.0,
         ),
         FCOS=dict(
-            NUM_CLASSES=80,
+            NUM_CLASSES=16,  #for DOTA dataset
             IN_FEATURES=["p3", "p4", "p5", "p6", "p7"],
             NUM_CONVS=4,
             FPN_STRIDES=[8, 16, 32, 64, 128],

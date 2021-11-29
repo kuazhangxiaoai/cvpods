@@ -70,8 +70,8 @@ class BaseDataset(Dataset):
         super(BaseDataset, self).__init__()
 
         self.name = dataset_name
-        self.data_root = osp.join(
-            osp.split(osp.split(cvpods.__file__)[0])[0], "datasets")
+        #TODO: choose your dataset root path
+        self.data_root = '/home/yanggang/diskPoints/work2/DOTA_SPLIT'
         self.transforms = transforms
         self.is_train = is_train
 

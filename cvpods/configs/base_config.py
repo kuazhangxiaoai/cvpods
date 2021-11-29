@@ -82,7 +82,7 @@ _config_dict = dict(
     ),
     DATALOADER=dict(
         # Number of data loading threads
-        NUM_WORKERS=2,
+        NUM_WORKERS=0,
         # If True, each batch should contain only images for which the aspect ratio
         # is compatible. This groups portrait images together, and landscape images
         # are not batched with portrait images.

@@ -264,4 +264,10 @@ def _get_builtin_metadata(dataset_name):
             "thing_classes": CITYSCAPES_THING_CLASSES,
             "stuff_classes": CITYSCAPES_STUFF_CLASSES,
         }
+
+    if dataset_name == "dota":
+        DOTA_CLASSES = ['plane', 'baseball-diamond', 'bridge', 'ground-track-field', 'small-vehicle', 'large-vehicle',
+                        'ship', 'tennis-court', 'basketball-court', 'storage-tank', 'soccer-ball-field',
+                        'roundabout','harbor', 'swimming-pool', 'helicopter', 'container-crane']
+        return {'dota_classes': DOTA_CLASSES}
     raise KeyError("No built-in metadata for dataset {}".format(dataset_name))

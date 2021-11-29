@@ -86,8 +86,8 @@ class DefaultRunner(SimpleRunner):
 
         self.data_loader = self.build_train_loader(cfg)
         # Assume these objects must be constructed in this order.
-        model = build_model(cfg)
-        self.model = maybe_convert_module(model)
+        self.model = build_model(cfg)
+        #self.model = maybe_convert_module(model)
         self.logger.info(f"Model: \n{self.model}")
 
         # Assume these objects must be constructed in this order.
@@ -105,11 +105,11 @@ class DefaultRunner(SimpleRunner):
             else:
                 self.mixed_precision = False
             torch.cuda.set_device(comm.get_local_rank())
-            self.model = DistributedDataParallel(
-                self.model,
-                device_ids=[comm.get_local_rank()],
-                broadcast_buffers=False,
-                find_unused_parameters=True)
+            #self.model = DistributedDataParallel(
+            #    self.model,
+            #    device_ids=[comm.get_local_rank()],
+            #    broadcast_buffers=False,
+            #    find_unused_parameters=True)
 
         super().__init__(
             self.model,
